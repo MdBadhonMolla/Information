@@ -5,86 +5,86 @@ https://github.com/git-for-windows/git/releases/download/v2.41.0.windows.1/Git-2
 
 	Account Create command.
 
-		cmd : git config  [see all details]
-			git config --global user.name “ name ”  [set name]
-			git config --global usre.email “ gmail “  [set gmail]
-			git config --list  [chack details]
+		cmd : git config  						[see all details]
+			git config --global user.name “ name ”  		[set name]
+			git config --global usre.email “ gmail “  	[set gmail]
+			git config --list  					[chack details]
 
 		if you change any information set new, use this command.
 
 	Make gir repository / folder.
 
-		cmd : pwd  [chack directory path] 
-			ls  [see all file in this folder]
-			ls -a  [see all visible and invisible file in this folder]
-			mkdir (folder name)  [create a folder and follow the given folder name]
-			rm -rf (folder name)  [Removed folder and follow the given folder name]
+		cmd : pwd  								[chack directory path] 
+			ls  								[see all file in this folder]
+			ls -a  							[see all visible and invisible file in this folder]
+			mkdir (folder name) 					[create a folder and follow the given folder name]
+			rm -rf (folder name)  					[Removed folder and follow the given folder name]
 			git init  [to make folder into a git folder]
 
 	Create file and Tracked file /untracked file.
 
-		cmd : touch (file.exe)  [create a exe file]
+		cmd : touch (file.exe)  					[create a exe file]
 
 		First all files are untracked, when all files go to staging area then files are tracked.
 
-		cmd : git add .  [all file add into staging area]
-			git add .(extension)  [only extension file are going to staging area]
-			git add (name.extension)  [only file name are going to staging area]
-			git rm --cached (file.exe)  [only extension file are going to unstaging area]
+		cmd : git add .  							[all file add into staging area]
+			git add .(extension)  					[only extension file are going to staging area]
+			git add (name.extension)  				[only file name are going to staging area]
+			git rm --cached (file.exe)  				[only extension file are going to unstaging area]
 
 		if the file add some data or modify then the file go to untracked and follow the same role go to tracking area
 
-			git restore (file name)  [if the change are not approve and restore] 
-			git diff  [see what the change or modify the file]
+			git restore (file name)  				[if the change are not approve and restore] 
+			git diff  							[see what the change or modify the file]
 
 	Staging to Local/unlocal.
 
 		if we going staging to local then we needs commits. if the folder commited then we can see access the file, date and time, 
 
-		cmd : git commit -m “(commit time print a massage)”  [commit the folder]
-			git log  [see the commit history]
-			git log --oneline  [see all commit history in sort]
+		cmd : git commit -m “(commit time print a massage)”  	[commit the folder]
+			git log  							[see the commit history]
+			git log --oneline  					[see all commit history in sort]
 
 		some time you need to quit git log so used (Q) 
 
 	Commit removed.(used carefully) 
 
-			git reset --soft HEAD^  [only undo commit but staging]
-`			git reset --soft HEAD ~(number)  [haw many commit reset]
-			git reset HEAD^  [undo commit and unstaging]
-			git reset HEAD ~(number)  [haw many commit reset and unstaging]
+			git reset --soft HEAD^  				[only undo commit but staging]
+`			git reset --soft HEAD ~(number)  			[haw many commit reset]
+			git reset HEAD^  						[undo commit and unstaging]
+			git reset HEAD ~(number)  				[haw many commit reset and unstaging]
 
 		if we use that cmd the commid delete properly.
 
-			git reset --hard HEAD^  [delete the head commit properly]
-			git reset --hard HEAD ~(number)  [haw many commit delete properly]
+			git reset --hard HEAD^  				[delete the head commit properly]
+			git reset --hard HEAD ~(number)  			[haw many commit delete properly]
 
 	Changed show.
 
 		cmd : git show  [show recently what changed]
-			git show (commit first 7 id or full)  [show commit time all the changed]
+			git show (commit first 7 id or full)  		[show commit time all the changed]
 
 	Travel commit to commit but not delete any file.
 
-		cmd : git checkout (commit id)  [go to another commit]
+		cmd : git checkout (commit id)  				[go to another commit]
 
 		this way extra file are removed but not delete properly every think like before cmd
 
-			git master  [go before]
+			git master  						[go before]
 
 		but the good think if we any think changed, we use the master all is clear and like before. The change is not except  
 
 	 Link with git-hub / contact remote access / Clone Repository.
 
-		cmd : git remote  [to see we connect any any remote accesses] 
-			git remote -v  [what remote accesses connect see the remote link]
-			git remote add (assigned name) (paste git repo link)  [connect git repo]
+		cmd : git remote  						[to see we connect any any remote accesses] 
+			git remote -v  						[what remote accesses connect see the remote link]
+			git remote add (assigned name) (git repo link)  [connect git repo]
 
 		first we need creat new folder than init then connect the remote accesses.
 
 		if we use the remote accesses, this way easy to push and pule the repo. 
  
-			git clone (repo remote link)  [copy all file and paste our computer] 
+			git clone (repo remote link)  			[copy all file and paste our computer] 
 
 		if we need to the git repo all file we can do clone fullfolder in-to our computer.
 
@@ -92,11 +92,28 @@ https://github.com/git-for-windows/git/releases/download/v2.41.0.windows.1/Git-2
 
 
 		if we need to push our file into the git repo then go to some process.
-			• our create all file & folder - git init.[Working directory] 
-			• git add.[staging area]
-			• git commit.[local repository]
-			• then git push.[remote repository]
 
-		cmd : git push
-			git pull  [pull all update in git hub]
+			• our create all file & folder - git init.	[Working directory] 
+			• git add.							[staging area]
+			• git commit.						[local repository]
+			• then git push.						[remote repository]
+
+		cmd : git push -u (remote name) (branch name)  		[to push the file ingit]
+			git pull  							[pull all update in git hub]
+
+
+	Git Branch.
+
+
+		we create many branch if we need, branch mean copy our main file ni to the branch file and correction there.
+
+		cmd : git branch  						[check haw many branch the folder]
+
+		if the branch name befor ‘*’ so this is a default / active / first branch.
+
+		git branch (name)  						[create branch name follow the name]
+		git checkout (branch name)    				[go another branch follow the branch name]
+		git branch -d (branch name)   				[delete the branch follow the branch name]
+		git checkout -b (name)  					[create branch follow the name and switch branch]
+
 
